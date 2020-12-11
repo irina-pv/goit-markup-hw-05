@@ -1,0 +1,128 @@
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  --accent-color: #2196f3;
+  --main-color-text: #212121;
+}
+body {
+  font-family: var(--main-font);
+  background-color: #ffffff;
+  color: var(--main-color-text);
+  font-style: normal;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*  спрятать заголовки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* .portfolio-main .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.portfolio-list li {
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-right: 30px;
+} */
+
+.portfolio-link {
+  display: block;
+}
+
+.portfolio-list .overlay {
+  font-family: var(--main-font);
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.overlay-wrapper {
+  position: relative;
+}
+
+.portfolio-list li:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.portfolio-list .portfolio-link:focus,
+.portfolio-list .portfolio-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.description-blok {
+  padding: 20px 24px;
+}
+.portfolio-list p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
