@@ -53,8 +53,7 @@
     <main>
         <section class="hero">
             <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-
-            <button class="button primary" type="button"> Заказать услугу</button>
+            <button class="button primary" type="button" data-modal-open> Заказать услугу</button>
         </section> </div>
     </main>
  <!---Преимущества-->
@@ -123,19 +122,24 @@
             <div class="container">
                     <div class="thumb-work">
                             <img  src="./img/box_1.png" alt="фото 1" width="370">
-                          <div class="blok-thumb" >
+                          <div class="blok-thumb">
                               <p class="work-text">Десктопные приложения</p>
                             </div> 
                     </div>
 
-                    <div> <img src="./img/box_2.png" alt="фото 2" width="370">
-                        <p>Мобильные приложения</p>
-                    </div>
-                    <div>
+                        <div class="thumb-work">
+                            <img src="./img/box_2.png "alt="фото 2" width="370">
+                            <div class="blok-thumb">
+                                <p class="work-text">Мобильные приложения</p>
+                            </div>
+                        </div>
+
+                    <div class="thumb-work">
                         <img src="./img/box_3.png" alt="фото 3" width="370">
-                        <p>Дизайнерские решения</p>        
+                        <div class="blok-thumb">
+                        <p class="work-text">Дизайнерские решения</p></div>
                     </div>
-         </div>
+            </div>
     </section>
  <!--Наша команда-->
     <section class="team">
@@ -308,7 +312,7 @@
             <ul class="list-client">
                 <li class="client-item">
                      <div class="blok-client">
-                        <a class="client-link " href="">
+                        <a class="client-link" href="">
                           <svg class="client-icon" width="45" height ="50">
                          <use href="./img/sprite.svg#logo-1" ></use>
                          </svg></a>
@@ -357,9 +361,9 @@
                  <section class="footer">
                      <h2 class="visually-hidden">Адрес</h2>
                      <div class="container">
-                          <div class="">
+                          <div >
                               <div class="blok-logo">
-                                <a class="logo-footer " href="http://info@devstudio.com/" target="_blank" rel="noopener noreferrer"
+                                <a class="logo-footer" href="http://info@devstudio.com/" target="_blank" rel="noopener noreferrer"
                                     aria-label="Логотип компании">
                                     <span class="logo-footer blue" lang="en">Web</span>Studio</span> </a>
                                 </div>
@@ -415,6 +419,21 @@
                             </div>
                 </section>
         </footer>
+        <!-- =Backdrop -->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="close-btn" data-modal-close>
+                    <svg class="modal-button_item"  width="18" height ="18">
+                        <use href="./img/sprite.svg#modbat"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script src="./js/modal.js"></script>
     </body>
     </html>
 
