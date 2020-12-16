@@ -237,7 +237,7 @@ nav .block-contact {
 /* герой-- */
 .hero {
   padding-bottom: 280px;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
   background-image: linear-gradient(
@@ -249,14 +249,12 @@ nav .block-contact {
   background-size: cover;
 }
 
-.hero .title {
-  width: 700px;
-  margin-left: 250px;
-  margin-right: 250px;
+.hero_blok-title .title {
+  display: block;
+  width: 696px;
+  margin: 0px auto;
   padding-top: 200px;
-  width: 100%;
   margin-bottom: 30px;
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -267,6 +265,8 @@ nav .block-contact {
 }
 /* кнопка */
 .button {
+  display: block;
+  margin: 0px auto;
   border-radius: 4px;
   border: 1px solid var(--accent-color);
   padding: 10px 32px;
@@ -495,12 +495,28 @@ li .profession {
   transition-duration: var(--link-transition-time);
   transition-timing-function: var(--link--transition-funcsion);
 }
+
+.blok-client:hover .client-icon,
+.blok-client:focus-within .client-icon {
+  fill: var(--accent-color);
+}
+
+.blok-client:hover,
+.blok-client:focus-within {
+  border: 1px solid var(--accent-color);
+}
+
+.blok-client {
+  transition-property: border;
+  transition-duration: var(--link-transition-time);
+  transition-timing-function: var(--link--transition-funcsion);
+}
+
 .list-client {
   justify-content: space-between;
   align-items: center;
   display: flex;
   padding-bottom: 94px;
-
   align-items: center;
 }
 
@@ -515,6 +531,7 @@ li .profession {
   text-align: center;
 }
 .blok-client {
+  padding-top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,19 +541,6 @@ li .profession {
   border: 1px solid #afb1b8;
 }
 
-.blok-client:hover .client-icon,
-.blok-client:focus .client-icon {
-  fill: var(--accent-color);
-}
-
-.blok-client:hover,
-.blok-client:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.blok-client {
-  padding-top: 8px;
-}
 .client-icon {
   display: block;
   fill: #afb1b8;
@@ -761,6 +765,10 @@ li .street {
   display: block;
 }
 
+.portfolio-list img {
+  max-width: 100%;
+}
+
 .overlay-wrapper .overlay {
   font-family: var(--main-font);
   font-weight: normal;
@@ -841,12 +849,15 @@ li .street {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform var(--link-transition-time)
+    var(--link--transition-funcsion);
 }
 .close-btn {
   width: 30px;
@@ -858,9 +869,19 @@ li .street {
   position: absolute;
   top: 8px;
   right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .is-hidden {
   opacity: 0px;
   visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+
+  transition: transform var(--link-transition-time)
+    var(--link--transition-funcsion);
 }
